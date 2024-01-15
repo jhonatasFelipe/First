@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Web\FirstUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+
+Route::controller(FirstUserController::class)->prefix('users')->group(function(){
+    Route::get('/', 'index');
+    Route::get('/add', 'show');
+    Route::post('/insert','create');
+    Route::get('/{id}','show');
 });

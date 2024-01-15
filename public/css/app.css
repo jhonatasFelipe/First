@@ -1,0 +1,48 @@
+
+
+form{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+
+form > input[type='text'], form > input[type='password']{
+    padding: 8px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin: 5px 0;
+} 
+
+
+.invalid{
+    border: solid red 2px;
+}
+
+
+.alert{
+    border: solid 0.5px;
+    padding: 5px;
+    font-family: Verdana, sans-serif;
+    border-radius:5px;
+    font-size: 12px;
+
+}
+
+.alert-danger{
+    border-color: red;
+    background-color: rgb(255, 205, 205);
+    color: red; 
+}
+
+.alert-warn{
+    border-color: orangered;
+    background-color: rgb(247, 194, 173);
+    color:orangered; 
+}
+
+
+
+
+
