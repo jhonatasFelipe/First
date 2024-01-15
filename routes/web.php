@@ -15,13 +15,12 @@ use App\Http\Controllers\Web\FirstUserController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/users');
 });
 
 
 Route::controller(FirstUserController::class)->prefix('users')->group(function(){
-    Route::get('/', 'index');
-    Route::get('/add', 'show');
-    Route::post('/insert','create');
-    Route::get('/{id}','show');
+    Route::get('/', 'index')->name('list_users');
+    Route::get('/add', 'show')->name('form_user');
+    Route::post('/insert','create')->name('create_user');
 });

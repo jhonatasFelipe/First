@@ -23,7 +23,7 @@ class FirstUserRequest extends FormRequest
     {
         return [
             'name' => 'required|min:3|max:50',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:first_users,email',
             'password' => 'required|min:6|max:20',
             'password_confirm' => 'required|same:password'
         ];
@@ -47,6 +47,7 @@ class FirstUserRequest extends FormRequest
             // email
             'email.required' => 'O campo e-mail é obrigatório',
             'email.mail' => 'insira um e-mail valido',
+            'email.unique' => 'E-mail já cadastrado!',
 
             // password
             'password.required' => 'O campo senha é obrigatório',

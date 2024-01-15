@@ -43,6 +43,88 @@ form > input[type='text'], form > input[type='password']{
 }
 
 
+.content-list{
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-list h1{
+    font-family: Verdana, sans-serif;
+}
+
+table{
+    width: 100%;
+    border: solid 0.5px grey;
+    border-radius: 10px;
+    padding: 5px;
+    font-family: Verdana, sans-serif;
+}
+
+thead{
+    background-color: white;
+}
+
+
+td{
+    padding: 15px;
+    text-align: center;
+}
+
+/* linhas pares (even) */
+table tbody tr:nth-child(even) {
+    background-color: #CCC;
+}
+/* linhas ímpares (odd) */
+table tbody tr:nth-child(odd) {
+    background-color: #FFF;
+}
+
+.link-insert{
+    background-color: #136dd4;
+    width: 200px;
+    padding: 10px 5px;
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    color: #FFF;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.actions{
+    padding: 10px 0;
+}
+
+
+.button{
+
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    min-width: 100px;
+    padding: 10px;
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.button-blue{
+    background-color: #136dd4;
+    color: #FFF;
+}
+
+.button-red{
+    background-color: #d4133d;
+    color: #FFF;
+}
+
+
 
 
 

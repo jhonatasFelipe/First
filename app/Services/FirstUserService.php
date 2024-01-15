@@ -6,7 +6,7 @@ use App\Repositories\FirstUserRepository;
 
 Class FirstUserService {
 
-    public function __construct(protected FirstUserRepository $repo){}
+    function __construct(protected FirstUserRepository $repo){}
         
     public function list(){
         return $this->repo->list();

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Web;
 use App\Repositories\FirstUserRepository;
 use App\Http\Requests\FirstUserRequest;
 use App\Http\Controllers\Controller;
+use App\Services\FirstUserService;
 
 class FirstUserController extends Controller
 {
@@ -21,8 +22,9 @@ class FirstUserController extends Controller
 
 
     public function create(FirstUserRequest $req){
+        $req->flash();
         $this->service->create($req->all());
-        return View('first-user.index');
+       return redirect('/users');
     }
 
     
